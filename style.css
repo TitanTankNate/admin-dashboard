@@ -8,6 +8,13 @@
   font-style: normal;
 }
 
+.syne-semibold {
+    font-family: "Syne", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+  }
+
 .titillium-web-light {
     font-family: "Titillium Web", system-ui;
     font-weight: 300;
@@ -36,9 +43,9 @@
 
 
 
-/*CSS RESET AND NORMALIZATION   CSS CSS CSS CSS CSS CSS CSS CSS CSS  */
+/* CSS RESET AND NORMALIZATION   CSS CSS CSS CSS CSS CSS CSS CSS CSS  */
 /* Remove annoying padding (opinion) */
-body, ul, p {
+body, ul, p, a {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -96,8 +103,15 @@ a {
 .layout-grid-container {
     /* Display declarations */
     display: grid;
-    grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 7fr;
+    grid-template-columns: 20vw 80vw;
+    grid-template-rows: 25vh 75vh;
+
+    /* Transforms and constraints */
+    max-height: 100vh;
+
+    /* DEBUG BORDERS */
+    /* border: 2px solid white; */
+
 }
 
 .sidebar {
@@ -122,23 +136,33 @@ a {
     grid-area: 1 / 2 / 2 / -1;
 
     /* CBPM */
-    padding: 6px 24px;
+    padding: 6px 36px;
+    box-shadow: 4px 4px 4px #000000;
 
     /* DEBUG BORDERS */
-    border: 2px solid green;
+    /* border: 2px solid green; */
 }
 
 .content-grid-container {
     /* Display declarations */
     display: grid;
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: 1fr 4fr 1fr 4fr;
+    grid-template-rows: 40px 4fr 1fr 4fr;
 
     /* Grid declarations */
     grid-area: 2 / 2 / -1 / -1;
+
+    /* Font and color declarations */
+    background-color: var(--background-color-darker);
+
+    /* Transforms and constraints */
+    flex-grow: 1;
+
+    /* CBPM */
+    padding: 6px 24px;
     
     /* DEBUG BORDERS */
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
 
 }
 
@@ -337,6 +361,7 @@ a {
     /* CBPM */
     border-radius: 18px;
     border: 2px solid var(--background-color-darker);
+    box-shadow: 2px 2px 2px #000000;
 }
 
 .header-nav-buttons:hover {
@@ -353,20 +378,33 @@ a {
 .card-grid-header {
     /* Grid declarations */
     grid-area: 1 / 1 / 2 / 2;
+    align-self: end;
+
+    /* CBPM */
+    padding-bottom: 4px;
 }
 
 .card-grid-container {
     /* Display declarations */
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
-    grid-template-rows: repeat(3,minmax(200px, 1fr));
-    gap: 15px;
+    grid-template-rows: repeat(3,minmax(200px, 300px));
+    grid-auto-rows: minmax(200px, 300px);
+    gap: 24px;
+    overflow: scroll;
+    scrollbar-width: none;
 
     /* Grid declarations */
     grid-area: 2 / 1 / -1 / 2;
 
+    /* Transforms and constraints */
+    max-height: 100%;
+
+    /* CBPM */
+    padding-right: 24px;
+
     /* DEBUG BORDERS */
-    border: 2px solid cyan;
+    /* border: 2px solid cyan; */
 }
 
 .site-feed-header {
@@ -409,7 +447,14 @@ a {
 .content-card {
     /* Display declarations */
     display: grid;
-    grid-template-rows: 1fr 3fr 2fr;
+    grid-template-rows: min-content 1fr 60px;
+
+    /* Font and color declarations */
+    background-color: var(--accent-color);
+
+    /* CBPM */
+    border-radius: 15px;;
+    padding: 0px 12px;
 
     /* DEBUG BORDERS */
     border: 2px solid white;    
@@ -418,19 +463,45 @@ a {
 .content-card h4 {
     /* Grid declarations */
     grid-area: 1;
+    align-self: end;
+
+    /* CBPM */
+    border-bottom: 2px solid var(--background-color-darker);
+    padding-top: 6px;
 }
 
 .content-card p {
     /* Grid declarations */
     grid-area: 2;
+    overflow: scroll;
+    scrollbar-width: none;
 }
 
 .card-links {
     /* Display declarations */
     display: flex;
+    justify-content: flex-end;
+    gap: 6px;
 
     /* Grid declarations */
     grid-area: 3;
+
+    /* CBPM */
+    border-top: 1px solid var(--background-color-darker);
+    padding-bottom: 12px;
+}
+
+.card-links img {
+    /* Font and color declarations */
+    filter: invert(79%) sepia(90%) saturate(287%) hue-rotate(18deg) brightness(104%) contrast(104%);
+
+    /* Transforms and constraints */
+    height: 36px;
+}
+
+.card-links img:hover {
+    /* Font and color declarations */
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(315deg) brightness(104%) contrast(102%);
 }
 
 
