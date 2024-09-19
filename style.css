@@ -59,6 +59,7 @@ a {
 :root {
     /* Colors */
     --background-color: #00302a;
+    --background-color-darker: #001c17;
     --accent-color: #07463f;
     --valid-color: #e1ff67;
     --font-default-color: #ffffff;
@@ -69,7 +70,7 @@ body {
     background-color: var(--background-color, #0F220F);
 }
 
-h1, h2, h3, h4, h5, a, p {
+h1, h2, h3, h4, h5, a, p, input {
     /* Font and color declarations */
     font-family: Syne, sans-serif;
     color: var(--font-default-color,#ffffff);
@@ -162,7 +163,7 @@ a {
     grid-area: 1 / 1 / 2 / 2;
 
     /* CBPM */
-
+    padding-right: 12px;
 
     /* DEBUG BORDERS */
     /* border: 2px solid cyan; */
@@ -186,13 +187,24 @@ a {
     /* Display declarations */
     flex-grow: 1;
 
+    /* Font and color declarations */
+    font-size: 1.1rem;
+    background-color: var(--background-color-darker);
+
     /* Transforms and constraints */
     height: 24px;
     max-width: 400px;
 
     /* CBPM */
     border-radius: 10px;
+    border: 2px solid var(--valid-color);
+    padding: 2px 8px;
 
+}
+
+.header-search-bar input:hover {
+    /* CBPM */
+    border: 2px solid var(--font-default-color);
 }
 
 
@@ -234,6 +246,7 @@ a {
 
     /* CBPM */
     border-radius: 24px;
+    box-shadow: 2px 2px 2px black;
 }
 
 .user-name-menu {
@@ -256,8 +269,11 @@ a {
     /* Grid declarations */
     grid-area: 2 / 1 / -1 / 2;
 
+    /* CBPM */
+    padding-right: 12px;
+
     /* DEBUG BORDERS */
-    border: 2px solid yellow;
+    /* border: 2px solid yellow; */
 }
 
 .user-profile-pic-large {
@@ -271,6 +287,7 @@ a {
 
     /* CBPM */
     border-radius: 48px;
+    box-shadow: 4px 4px 4px black;
 }
 
 .greeting-text {
@@ -284,13 +301,50 @@ a {
 }
 
 
-
+/* /* Header Nav Menu   hnm hnm hnm hnm hnm hnm*/
 .header-nav-links {
+    /* Display declarations */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+
+    /* Transforms and constraints */
+    min-width: min-content;
+
     /* Grid declarations */
     grid-area: 2 / 2 / -1 / -1;
 
     /* DEBUG BORDERS */
-    border: 2px solid white;
+    /* border: 2px solid white; */
+}
+
+.header-nav-buttons {
+    /* Display declarations */
+    flex: 1;
+
+    /* Font and color declaratinos */
+    background-color: var(--valid-color);
+    color: var(--background-color-darker);
+    font-weight: 600;
+
+    /* Transforms and constraints */
+    height: 36px;
+    min-width: fit-content;
+    max-width: 150px;
+
+    /* CBPM */
+    border-radius: 18px;
+    border: 2px solid var(--background-color-darker);
+}
+
+.header-nav-buttons:hover {
+    /* Font and color transformations */
+    background-color: var(--font-default-color);
+
+    /* CBPM */
+    border: 2px solid var(--valid-color);
 }
 
 
