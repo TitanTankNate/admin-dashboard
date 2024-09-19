@@ -32,6 +32,10 @@
     font-style: normal;
   }
 
+
+
+
+
 /*CSS RESET AND NORMALIZATION   CSS CSS CSS CSS CSS CSS CSS CSS CSS  */
 /* Remove annoying padding (opinion) */
 body, ul, p {
@@ -45,6 +49,7 @@ a {
     text-decoration: none;
     color: inherit;
 }
+
 
 
 
@@ -178,6 +183,12 @@ a {
 }
 
 .card-grid-container {
+    /* Display declarations */
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
+    grid-template-rows: repeat(3,minmax(200px, 1fr));
+    gap: 15px;
+
     /* Grid declarations */
     grid-area: 2 / 1 / -1 / 2;
 
@@ -191,6 +202,10 @@ a {
 }
 
 .site-feed-container {
+    /* Display declarations */
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+
     /* Grid declarations */
     grid-area: 2 / 2 / 3 / -1;
     
@@ -204,9 +219,83 @@ a {
 }
 
 .site-trends-container {
+    /* Display declarations */
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+
     /* Grid declarations */
     grid-area: 4 / 2 / -1 / -1;
 
     /* DEBUG BORDERS */
     border: 2px solid yellow;
+}
+
+
+
+/* CONTENT CARD STYLE   CC  CC  CC  CC  CC  CC  CC  CC  CC  CC  CC   */
+.content-card {
+    /* Display declarations */
+    display: grid;
+    grid-template-rows: 1fr 3fr 2fr;
+
+    /* DEBUG BORDERS */
+    border: 2px solid white;    
+}
+
+.content-card h4 {
+    /* Grid declarations */
+    grid-area: 1;
+}
+
+.content-card p {
+    /* Grid declarations */
+    grid-area: 2;
+}
+
+.card-links {
+    /* Display declarations */
+    display: flex;
+
+    /* Grid declarations */
+    grid-area: 3;
+}
+
+
+
+/* SITE FEED STYLE  SF  SF  SF  SF  SF  SF  SF  SF  SF  SF  SF  SF   */
+.site-feed-card {
+    /* Display declarations */
+    display: flex;
+    flex-direction: column;
+
+    /* DEBUG BORDERS */
+    border: 2px solid white;
+}
+
+
+
+/* SIDE TRENDS STYLE    ST  ST  ST  ST  ST  ST  ST  ST  ST  ST  ST   */
+.site-trends-card {
+    /* Display declarations */
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: repeat(2, 1fr);
+
+    /* DEBUG BORDERS */
+    border: 2px solid white;
+}
+
+.site-trends-card a {
+    /* Grid declarations */
+    grid-area: 1 / 1 / -1 / 2;
+}
+
+.site-trends-card h5 {
+    /* Grid declarations */
+    grid-area: 1 / 2 / 2 / -1;
+}
+
+.site-trends-card p {
+    /* Grid declarations */
+    grid-area: 2 / 2 / -1 / -1;
 }
