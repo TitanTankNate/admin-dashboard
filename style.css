@@ -110,11 +110,14 @@ a {
 .header-grid-container {
     /* Display declarations */
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr 1.5fr;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: minmax(50px, 80px) minmax(120px, 1.5fr);
 
     /* Grid declarations */
     grid-area: 1 / 2 / 2 / -1;
+
+    /* CBPM */
+    padding: 6px 24px;
 
     /* DEBUG BORDERS */
     border: 2px solid green;
@@ -142,21 +145,58 @@ a {
 
 
 /* HEADER STYLE H   H   H   H   H   H   H   H   H   H   H   H   H   H*/
+
+/* /* Header Search Bar hs  hs  hs  hs  hs  hs */
 .header-search-bar {
+    /* Display declarations */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 6px;
+
     /* Grid declarations */
     grid-area: 1 / 1 / 2 / 2;
+
+    /* CBPM */
+
 
     /* DEBUG BORDERS */
     border: 2px solid cyan;
 }
 
+.search-icon {
+    /* Transforms and constraints */
+    height: 24px;
+}
+
+.header-search-bar input {
+    /* Display declarations */
+    flex-grow: 1;
+
+    /* Transforms and constraints */
+    height: 24px;
+    max-width: 400px;
+
+    /* CBPM */
+    border-radius: 10px;
+
+}
+
+
+/* /* Header User Information   hui hui hui hui*/
 .header-user-information {
+    /* Display declarations */
+    display: flex;
+
     /* Grid declarations */
     grid-area: 1 / 2 / 2 / -1;
 
     /* DEBUG BORDERS */
     border: 2px solid magenta;
 }
+
+
+
 
 .header-user-greeting {
     /* Grid declarations */
