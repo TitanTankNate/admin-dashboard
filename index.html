@@ -6,54 +6,66 @@
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="style.css">
     <script src="javascript.js" defer></script>
-</head>
-<body>
+
+    <!-- Font Preconnects-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet"></head>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <body>
     <div class="layout-grid-container">
         <nav class="sidebar">
             <div class="logo">
                 <h1>logo</h1>
             </div>
+
             <ul class="nav-links1">
-                <li class="sidebar-nav-links" id="link1">link1</li>
-                <li class="sidebar-nav-links" id="link2">link2</li>
-                <li class="sidebar-nav-links" id="link3">link3</li>
-                <li class="sidebar-nav-links" id="link4">link4</li>
-                <li class="sidebar-nav-links" id="link5">link5</li>
-                <li class="sidebar-nav-links" id="link6">link6</li>
+                <li class="sidebar-nav-links" id="link1"><a href="javascript:void(0)">link1</a></li>
+                <li class="sidebar-nav-links" id="link2"><a href="javascript:void(0)">link2</a></li>
+                <li class="sidebar-nav-links" id="link3"><a href="javascript:void(0)">link3</a></li>
+                <li class="sidebar-nav-links" id="link4"><a href="javascript:void(0)">link4</a></li>
+                <li class="sidebar-nav-links" id="link5"><a href="javascript:void(0)">link5</a></li>
+                <li class="sidebar-nav-links" id="link6"><a href="javascript:void(0)">link6</a></li>
             </ul>
+
             <ul class="nav-links2">
-                <li class="sidebar-nav-links" id="link7">link7</li>
-                <li class="sidebar-nav-links" id="link8">link8</li>
-                <li class="sidebar-nav-links" id="link9">link9</li>
+                <li class="sidebar-nav-links" id="link7"><a href="javascript:void(0)">link7</a></li>
+                <li class="sidebar-nav-links" id="link8"><a href="javascript:void(0)">link8</a></li>
+                <li class="sidebar-nav-links" id="link9"><a href="javascript:void(0)">link9</a></li>
             </ul>
         </nav>
-        <header class="header">
-            <div class="header-grid-container">
-                <div class="header-search-bar">
-                    <img src="" alt="search icon" class="search-icon">
-                    <input type="text" name="search-field" id="search-field" class="search-field">
-                </div>
-                <div class="header-user-information">
-                    <img src="" alt="notification bell icon" class="notification-bell-icon">
-                    <a class="user-profile-pic-small" href="javascript:void(0)"><img src="" alt="user profile picture small"></a>
-                    <a href="javascript:void(0)" class="user-name-menu">username</a>
-                </div>
-                <div class="header-user-greeting">
-                    <img src="" alt="user profile picture large" class="user-profile-pic-large">
-                    <div class="greeting-text">
-                        <p>Greeting text,</p>
-                        <h2>Username (@username)</h2>
-                    </div>
-                </div>
-                <nav class="header-nav-links">
-                    <button class="header-nav-buttons" id="hnav-button1">hnav-button1</button>
-                    <button class="header-nav-buttons" id="hnav-button2">hnav-button2</button>
-                    <button class="header-nav-buttons" id="hnav-button3">hnav-button3</button>
-                </nav>
+
+
+        <header class="header-grid-container">
+            <div class="header-search-bar">
+                <a href="javascript:void(0)"><img src="" alt="search icon" class="search-icon"></a>
+                <input type="text" name="search-field" id="search-field" class="search-field">
             </div>
+
+            <div class="header-user-information">
+                <a href="javascript:void(0)"><img src="" alt="notification bell icon" class="notification-bell-icon"></a>
+                <a class="user-profile-pic-small" href="javascript:void(0)"><img src="" alt="user profile picture small"></a>
+                <a href="javascript:void(0)" class="user-name-menu">username</a>
+            </div>
+
+            <div class="header-user-greeting">
+                <img src="" alt="user profile picture large" class="user-profile-pic-large">
+                <div class="greeting-text">
+                    <p>Greeting text,</p>
+                    <h2>Username (@username)</h2>
+                </div>
+            </div>
+
+            <nav class="header-nav-links">
+                <button class="header-nav-buttons" id="hnav-button1">hnav-button1</button>
+                <button class="header-nav-buttons" id="hnav-button2">hnav-button2</button>
+                <button class="header-nav-buttons" id="hnav-button3">hnav-button3</button>
+            </nav>
         </header>
+
+
         <div class="content-grid-container">
-            <h3>Card Grid Header</h3>
+            <h3 class="card-grid-header">Card Grid Header</h3>
             <div class="card-grid-container">
                 <div class="content-card" id="card1">
                     <h4>Card Title Text</h4>
@@ -64,6 +76,7 @@
                         <a href="javascript:void(0)" class="card-link-favorite-icon"><img src="" alt="card link favorite icon"></a>
                     </nav>
                 </div>
+
                 <div class="content-card" id="card2">
                     <h4>Card Title Text</h4>
                     <p>Card content text.</p>
@@ -73,6 +86,7 @@
                         <a href="javascript:void(0)" class="card-link-favorite-icon"><img src="" alt="card link favorite icon"></a>
                     </nav>
                 </div>
+
                 <div class="content-card" id="card3">
                     <h4>Card Title Text</h4>
                     <p>Card content text.</p>
@@ -82,6 +96,7 @@
                         <a href="javascript:void(0)" class="card-link-favorite-icon"><img src="" alt="card link favorite icon"></a>
                     </nav>
                 </div>
+
                 <div class="content-card" id="card4">
                     <h4>Card Title Text</h4>
                     <p>Card content text.</p>
@@ -91,6 +106,7 @@
                         <a href="javascript:void(0)" class="card-link-favorite-icon"><img src="" alt="card link favorite icon"></a>
                     </nav>
                 </div>
+
                 <div class="content-card" id="card5">
                     <h4>Card Title Text</h4>
                     <p>Card content text.</p>
@@ -100,6 +116,7 @@
                         <a href="javascript:void(0)" class="card-link-favorite-icon"><img src="" alt="card link favorite icon"></a>
                     </nav>
                 </div>
+
                 <div class="content-card" id="card6">
                     <h4>Card Title Text</h4>
                     <p>Card content text.</p>
@@ -109,6 +126,7 @@
                         <a href="javascript:void(0)" class="card-link-favorite-icon"><img src="" alt="card link favorite icon"></a>
                     </nav>
                 </div>
+
                 <div class="content-card" id="card7">
                     <h4>Card Title Text</h4>
                     <p>Card content text.</p>
@@ -118,6 +136,7 @@
                         <a href="javascript:void(0)" class="card-link-favorite-icon"><img src="" alt="card link favorite icon"></a>
                     </nav>
                 </div>
+
                 <div class="content-card" id="card8">
                     <h4>Card Title Text</h4>
                     <p>Card content text.</p>
@@ -128,47 +147,58 @@
                     </nav>
                 </div>
             </div>
-            <h3>Site Feed Header</h3>
+
+
+            <h3 class="site-feed-header">Site Feed Header</h3>
             <div class="site-feed-container">
                 <div class="site-feed-card" id="sfeed-card1">
                     <h5>Card Title Text</h5>
                     <p>Card text content.</p>
                 </div>
+
                 <div class="site-feed-card" id="sfeed-card2">
                     <h5>Card Title Text</h5>
                     <p>Card text content.</p>
                 </div>
+
                 <div class="site-feed-card" id="sfeed-card3">
                     <h5>Card Title Text</h5>
                     <p>Card text content.</p>
                 </div>
+
                 <div class="site-feed-card" id="sfeed-card4">
                     <h5>Card Title Text</h5>
                     <p>Card text content.</p>
                 </div>
             </div>
-            <h3>Site Trends Header</h3>
+
+
+            <h3 class="site-trends-header">Site Trends Header</h3>
             <div class="site-trends-container">
                 <div class="site-trends-card" id="strend-card1">
                     <a href="javascript:void(0)" class="user-profile-pic-small"><img src="" alt="user profile pic small"></a>
                     <h5>@Username</h5>
                     <p>User Description</p>
                 </div>
+
                 <div class="site-trends-card" id="strend-card2">
                     <a href="javascript:void(0)" class="user-profile-pic-small"><img src="" alt="user profile pic small"></a>
                     <h5>@Username</h5>
                     <p>User Description</p>
                 </div>
+
                 <div class="site-trends-card" id="strend-card3">
                     <a href="javascript:void(0)" class="user-profile-pic-small"><img src="" alt="user profile pic small"></a>
                     <h5>@Username</h5>
                     <p>User Description</p>
                 </div>
+
                 <div class="site-trends-card" id="strend-card4">
                     <a href="javascript:void(0)" class="user-profile-pic-small"><img src="" alt="user profile pic small"></a>
                     <h5>@Username</h5>
                     <p>User Description</p>
                 </div>
+
                 <div class="site-trends-card" id="strend-card5">
                     <a href="javascript:void(0)" class="user-profile-pic-small"><img src="" alt="user profile pic small"></a>
                     <h5>@Username</h5>

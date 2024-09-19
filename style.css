@@ -1,3 +1,212 @@
-* {
+/* FONT IMPORT */
+/* All fonts from fonts.google.com */
 
+.syne-normal {
+  font-family: "Syne", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.titillium-web-light {
+    font-family: "Titillium Web", system-ui;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .titillium-web-regular {
+    font-family: "Titillium Web", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .titillium-web-semibold {
+    font-family: "Titillium Web", system-ui;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .titillium-web-bold {
+    font-family: "Titillium Web", system-ui;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+/*CSS RESET AND NORMALIZATION   CSS CSS CSS CSS CSS CSS CSS CSS CSS  */
+/* Remove annoying padding (opinion) */
+body, ul, p {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Remove annoying text decoration (opinion) */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+
+/* THEME TH TH  TH  TH  TH  TH  TH  TH  TH  TH  TH  TH  TH  TH  TH   */
+
+:root {
+    /* Colors */
+    --background-color: #00302a;
+    --accent-color: #07463f;
+    --valid-color: #e1ff67;
+    --font-default-color: #ffffff;
+}
+
+body {
+    /* Font and color declarations */
+    background-color: var(--background-color, #0F220F);
+}
+
+h1, h2, h3, h4, h5, a, p {
+    /* Font and color declarations */
+    font-family: Syne, sans-serif;
+    color: var(--font-default-color,#ffffff)
+}
+
+p {
+    /* Font and color declarations */
+    font-family: Titillium Web, sans-serif;
+}
+
+a {
+    /* Font and color declarations */
+    color: var(--valid-color, white);
+}
+
+
+
+/* LAYOUT GRID LG   LG  LG  LG  LG  LG  LG  LG  LG  LG  LG  LG  LG   */
+.layout-grid-container {
+    /* Display declarations */
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 7fr;
+}
+
+.sidebar {
+    /* Display declarations */
+    display: grid;
+    grid-template-rows: 0.25fr 2fr 2fr;
+
+    /* Grid declarations */
+    grid-area: 1 / 1 / -1 / 2;
+
+    /* DEBUG BORDERS */
+    border: 2px solid red;
+}
+
+.header-grid-container {
+    /* Display declarations */
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1.5fr;
+
+    /* Grid declarations */
+    grid-area: 1 / 2 / 2 / -1;
+
+    /* DEBUG BORDERS */
+    border: 2px solid green;
+}
+
+.content-grid-container {
+    /* Display declarations */
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 4fr 1fr 4fr;
+
+    /* Grid declarations */
+    grid-area: 2 / 2 / -1 / -1;
+    
+    /* DEBUG BORDERS */
+    border: 2px solid blue;
+
+}
+
+
+
+/* SIDEBAR STYLE    SB  SB  SB  SB  SB  SB  SB  SB  SB  SB  SB  SB   */
+
+
+
+
+/* HEADER STYLE H   H   H   H   H   H   H   H   H   H   H   H   H   H*/
+.header-search-bar {
+    /* Grid declarations */
+    grid-area: 1 / 1 / 2 / 2;
+
+    /* DEBUG BORDERS */
+    border: 2px solid cyan;
+}
+
+.header-user-information {
+    /* Grid declarations */
+    grid-area: 1 / 2 / 2 / -1;
+
+    /* DEBUG BORDERS */
+    border: 2px solid magenta;
+}
+
+.header-user-greeting {
+    /* Grid declarations */
+    grid-area: 2 / 1 / -1 / 2;
+
+    /* DEBUG BORDERS */
+    border: 2px solid yellow;
+}
+
+.header-nav-links {
+    /* Grid declarations */
+    grid-area: 2 / 2 / -1 / -1;
+
+    /* DEBUG BORDERS */
+    border: 2px solid white;
+}
+
+
+
+/* CONTENT GRID CG  CG  CG  CG  CG  CG  CG  CG  CG  CG  CG  CG  CG   */
+.card-grid-header {
+    /* Grid declarations */
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.card-grid-container {
+    /* Grid declarations */
+    grid-area: 2 / 1 / -1 / 2;
+
+    /* DEBUG BORDERS */
+    border: 2px solid cyan;
+}
+
+.site-feed-header {
+    /* Grid declarations */
+    grid-area: 1 / 2 / 2 / -1;
+}
+
+.site-feed-container {
+    /* Grid declarations */
+    grid-area: 2 / 2 / 3 / -1;
+    
+    /* DEBUG BORDERS */
+    border: 2px solid magenta;
+}
+
+.site-trends-header {
+    /* Grid declarations */
+    grid-area: 3 / 2 / 4 / -1;
+}
+
+.site-trends-container {
+    /* Grid declarations */
+    grid-area: 4 / 2 / -1 / -1;
+
+    /* DEBUG BORDERS */
+    border: 2px solid yellow;
 }
