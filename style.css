@@ -72,7 +72,11 @@ body {
 h1, h2, h3, h4, h5, a, p {
     /* Font and color declarations */
     font-family: Syne, sans-serif;
-    color: var(--font-default-color,#ffffff)
+    color: var(--font-default-color,#ffffff);
+
+    /* CBPM */
+    padding: 0;
+    margin: 0;
 }
 
 p {
@@ -161,12 +165,21 @@ a {
 
 
     /* DEBUG BORDERS */
-    border: 2px solid cyan;
+    /* border: 2px solid cyan; */
 }
 
 .search-icon {
+    /* Font and color declarations */
+    filter: invert(79%) sepia(90%) saturate(287%) hue-rotate(18deg) brightness(104%) contrast(104%);
+
     /* Transforms and constraints */
     height: 24px;
+    
+}
+
+.search-icon:hover {
+    /* Font and color declarations */
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(315deg) brightness(104%) contrast(102%);
 }
 
 .header-search-bar input {
@@ -187,24 +200,90 @@ a {
 .header-user-information {
     /* Display declarations */
     display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 24px;
 
     /* Grid declarations */
     grid-area: 1 / 2 / 2 / -1;
 
+    /* CBPM */
+
     /* DEBUG BORDERS */
-    border: 2px solid magenta;
+    /* border: 2px solid magenta; */
+}
+
+.notification-bell-icon {
+    /* Font and color declarations */
+    filter: invert(79%) sepia(90%) saturate(287%) hue-rotate(18deg) brightness(104%) contrast(104%);
+    /* Transforms and constraints */
+    height: 24px;
+}
+
+.notification-bell-icon:hover {
+    /* Font and color declarations */
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(315deg) brightness(104%) contrast(102%);
+}
+
+.user-profile-pic-small, .user-profile-pic-small img {
+    /* Font and color declarations */
+    background-color: var(--font-default-color);
+
+    /* Transforms and constraints */
+    height: 48px;
+
+    /* CBPM */
+    border-radius: 24px;
+}
+
+.user-name-menu {
+    /* Font and color declarations */
+    font-weight: 600;
+}
+
+.user-name-menu:hover {
+    /* Font and color declarations */
+    color: var(--font-default-color)
 }
 
 
-
-
+/* /* Header User Greeting  hug hug hug hug hug*/
 .header-user-greeting {
+    /* Display declarations */
+    display: grid;
+    grid-template-columns: minmax(108px, .75fr) 4fr;
+    
     /* Grid declarations */
     grid-area: 2 / 1 / -1 / 2;
 
     /* DEBUG BORDERS */
     border: 2px solid yellow;
 }
+
+.user-profile-pic-large {
+    /* Grid declarations */
+    grid-column: 1;
+    align-self: center;
+
+    /* Transforms and constraints */
+    height: 96px;
+    background-color: var(--font-default-color);
+
+    /* CBPM */
+    border-radius: 48px;
+}
+
+.greeting-text {
+    /* Display declarations */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    /* Grid declarations */
+    grid-column: 2;
+}
+
+
 
 .header-nav-links {
     /* Grid declarations */
