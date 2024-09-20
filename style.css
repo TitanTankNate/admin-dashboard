@@ -146,7 +146,7 @@ a {
 .content-grid-container {
     /* Display declarations */
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 3fr 2fr;
     grid-template-rows: 40px 4fr 1fr 4fr;
 
     /* Grid declarations */
@@ -375,6 +375,7 @@ a {
 
 
 /* CONTENT GRID CG  CG  CG  CG  CG  CG  CG  CG  CG  CG  CG  CG  CG   */
+/* /* Card Grid cg  cg  cg  cg  cg  cg  cg  cg */
 .card-grid-header {
     /* Grid declarations */
     grid-area: 1 / 1 / 2 / 2;
@@ -387,7 +388,7 @@ a {
 .card-grid-container {
     /* Display declarations */
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
     grid-template-rows: repeat(3,minmax(200px, 300px));
     grid-auto-rows: minmax(200px, 300px);
     gap: 24px;
@@ -407,6 +408,9 @@ a {
     /* border: 2px solid cyan; */
 }
 
+
+
+/* /* Site Feed sf  sf  sf  sf  sf  sf  sf  sf */
 .site-feed-header {
     /* Grid declarations */
     grid-area: 1 / 2 / 2 / -1;
@@ -415,24 +419,34 @@ a {
 .site-feed-container {
     /* Display declarations */
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(3, minmax(100px, 1fr));
+    overflow: scroll;
+    scrollbar-width: none;
 
     /* Grid declarations */
     grid-area: 2 / 2 / 3 / -1;
-    
-    /* DEBUG BORDERS */
-    border: 2px solid magenta;
+
+    /* CBPM */
+    border-radius: 15px;
+    border: 2px solid var(--font-default-color);
+    padding: 4px;
 }
 
+
+
+/* /* Site Trends   st  st  st  st  st  st  st */
 .site-trends-header {
     /* Grid declarations */
     grid-area: 3 / 2 / 4 / -1;
+    align-self: end;
 }
 
 .site-trends-container {
     /* Display declarations */
     display: grid;
     grid-template-rows: repeat(4, 1fr);
+    overflow: scroll;
+    scrollbar-width: none;
 
     /* Grid declarations */
     grid-area: 4 / 2 / -1 / -1;
@@ -507,14 +521,43 @@ a {
 
 
 /* SITE FEED STYLE  SF  SF  SF  SF  SF  SF  SF  SF  SF  SF  SF  SF   */
+.site-feed-header {
+    /* Grid declarations */
+    align-self: end;
+
+    /* CBPM */
+    padding-bottom: 4px;
+}
+
 .site-feed-card {
     /* Display declarations */
-    display: flex;
-    flex-direction: column;
-
-    /* DEBUG BORDERS */
-    border: 2px solid white;
+    display: grid;
+    grid-template-rows: min-content 1fr;
 }
+
+.site-feed-card h4 {
+    color: var(--valid-color);
+    /* Grid declarations */
+    grid-row: 1;
+    align-self: end;
+
+    /* CBPM */
+    border-bottom: 2px solid var(--accent-color);
+    padding-top: 8px;
+}
+
+.site-feed-card p {
+    /* Grid declarations */
+    grid-row: 2;
+    overflow: scroll;
+    scrollbar-width: none;
+
+    /* CBPM */
+    padding: 0px 4px 4px 4px;
+    border-bottom: 1px solid var(--font-default-color);
+}
+
+
 
 
 
