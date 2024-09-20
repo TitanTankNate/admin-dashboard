@@ -374,6 +374,8 @@ a {
 
 
 
+
+
 /* CONTENT GRID CG  CG  CG  CG  CG  CG  CG  CG  CG  CG  CG  CG  CG   */
 /* /* Card Grid cg  cg  cg  cg  cg  cg  cg  cg */
 .card-grid-header {
@@ -435,24 +437,21 @@ a {
 
 
 /* /* Site Trends   st  st  st  st  st  st  st */
-.site-trends-header {
-    /* Grid declarations */
-    grid-area: 3 / 2 / 4 / -1;
-    align-self: end;
-}
-
 .site-trends-container {
     /* Display declarations */
     display: grid;
     grid-template-rows: repeat(4, 1fr);
+    gap: 8px;
     overflow: scroll;
     scrollbar-width: none;
 
     /* Grid declarations */
     grid-area: 4 / 2 / -1 / -1;
 
-    /* DEBUG BORDERS */
-    border: 2px solid yellow;
+    /* CBPM */
+    border-radius: 15px;
+    border: 2px solid var(--font-default-color);
+    padding: 8px;
 }
 
 
@@ -520,6 +519,8 @@ a {
 
 
 
+
+
 /* SITE FEED STYLE  SF  SF  SF  SF  SF  SF  SF  SF  SF  SF  SF  SF   */
 .site-feed-header {
     /* Grid declarations */
@@ -562,27 +563,46 @@ a {
 
 
 /* SIDE TRENDS STYLE    ST  ST  ST  ST  ST  ST  ST  ST  ST  ST  ST   */
+.site-trends-header {
+    /* Grid declarations */
+    grid-area: 3 / 2 / 4 / -1;
+    align-self: end;
+
+    /* CBPM */
+    padding-bottom: 4px;
+}
+
 .site-trends-card {
     /* Display declarations */
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 52px 3fr;
     grid-template-rows: repeat(2, 1fr);
 
     /* DEBUG BORDERS */
-    border: 2px solid white;
+    /* border: 2px solid white; */
 }
 
 .site-trends-card a {
     /* Grid declarations */
     grid-area: 1 / 1 / -1 / 2;
+    justify-self: center;
 }
 
 .site-trends-card h5 {
     /* Grid declarations */
     grid-area: 1 / 2 / 2 / -1;
+    align-self: end;
+
+    /* CBPM */
+    padding-left: 8px;
 }
 
 .site-trends-card p {
     /* Grid declarations */
     grid-area: 2 / 2 / -1 / -1;
+    align-self: start;
+
+    /* CBPM */
+    line-height: 100%;
+    padding-left: 8px;
 }
